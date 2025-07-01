@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Routes, Route, Form } from "react-router-dom";
 export default function App() {
   const [switchMode,setswitchMode] = useState('light');
   
-
+  //switch to dark or light mode using this function
   const toggleMode = ()=>{
     if(switchMode=== 'light'){
       setswitchMode('dark');
@@ -28,13 +28,13 @@ export default function App() {
            <Navbar toggleMode={toggleMode} mode={switchMode}/>
           <Routes>
             <Route path="/" element={<h1></h1>} />
-            <Route path="/movies" element={<h1>Movies Page</h1>} />
+            {/* need to create seperate page of movies and tv shows */}
+            <Route path="/movies" element={<h1>Movies Page</h1>} /> 
             <Route path="/tvshows" element={<h1>TV Shows Page</h1>} />
             <Route path="/about" element={<h1>About Page</h1>} />
           </Routes>
         </Router>
         <SearchBar switchMode={switchMode}/>
-        
       </div>
     </>
   )

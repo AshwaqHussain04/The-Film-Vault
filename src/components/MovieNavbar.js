@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default function MovieNavbar(props) {
+  // custom colors for navbar during dark mode and light mode.
   let mystyle ={
     color: props.mode === 'light' ? '#212121' : 'white' ,
     backgroundColor: props.mode === 'light'?'#03A6A1' :'#E8988A',

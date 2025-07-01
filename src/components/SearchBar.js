@@ -7,14 +7,14 @@ import {MovieCards} from './Movie_Cards'
 export default function SearchBar(props) {
   
     const [Searchitem,setSearchitem] = useState('');
-    const [movies,setmovies] = useState([]);
-    const [error, setError] = useState("");
+    const [movies,setmovies] = useState([]); //array to store the movies imported from OMDB API
+    const [error, setError] = useState(""); //to handle errors
     
 
     const onEnterSearchKey = (e) => {
       if (e.key === 'Enter') {
-        e.preventDefault();
-        fetchMovies(Searchitem, setmovies, setError);
+        e.preventDefault(); //to prevent the page from reloading everytime to prevent breaking components
+        fetchMovies(Searchitem, setmovies, setError); //send the movie name from searchbar to Fetch()to fetch that movie
       }
     }
 
@@ -36,10 +36,12 @@ export default function SearchBar(props) {
                       <p className="text-dark">
                         Showing {movies.length} movies for '{Searchitem}'
                       </p>
+                      {/* get the necessary data like IMDBID from movies array to display in card component */}
                       {movies.map((movie) => (
                         <MovieCards mode={props.mode} key={movie.imdbID} movie={movie} />
                       ))}
                     </>
+                    // if there is an error display the error message
                       ) : (
                         error && <p className="text-danger">Error: {error}</p>
                       )}
