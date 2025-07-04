@@ -14,9 +14,11 @@ export default function App() {
     if(switchMode=== 'light'){
       setswitchMode('dark');
       document.body.style.backgroundColor = '#212121';
+      document.body.style.transition ='all 0.5s ease';
     }else{
       setswitchMode('light'); 
       document.body.style.backgroundColor = 'white';
+      document.body.style.transition = 'all 0.5s ease'
     }
   
   }
@@ -34,7 +36,7 @@ export default function App() {
             <Route path="/about" element={<h1>About Page</h1>} />
           </Routes>
         </Router>
-        <SearchBar switchMode={switchMode}/>
+        <SearchBar mode={switchMode}/>
       </div>
     </>
   )
