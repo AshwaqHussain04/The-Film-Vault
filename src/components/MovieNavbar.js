@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function MovieNavbar(props) {
   // custom colors for navbar during dark mode and light mode.
@@ -17,9 +18,9 @@ export default function MovieNavbar(props) {
           <div className="collapse navbar-collapse" id="navbarColor01">
             <ul className="navbar-nav me-auto">
               <li className="nav-item">
-                <a className="nav-link active" href="#">Home
+                <Link className="nav-link active" to="/">Home
                   <span className="visually-hidden">(current)</span>
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">Movies</a>
@@ -28,7 +29,7 @@ export default function MovieNavbar(props) {
                 <a className="nav-link" href="#">Tv Shows</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">About</a>
+                <Link className="nav-link" to="/about">About</Link>
               </li>
             </ul>
             <button onClick={props.toggleMode} className={`btn btn-${props.mode ==='dark'?'light':'dark'}`}> Dark Mode</button>

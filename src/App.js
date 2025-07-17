@@ -4,6 +4,7 @@ import 'bootswatch/dist/flatly/bootstrap.min.css';
 import Navbar from './components/MovieNavbar.js'
 import SearchBar from './components/SearchBar.js'
 import { BrowserRouter as Router, Routes, Route, Form } from "react-router-dom";
+import About from "../src/components/aboutsection.js"
 
 
 export default function App() {
@@ -29,14 +30,13 @@ export default function App() {
         <Router>
            <Navbar toggleMode={toggleMode} mode={switchMode}/>
           <Routes>
-            <Route path="/" element={<h1></h1>} />
+             <Route path="/" element={<SearchBar mode={switchMode}/>}/> 
             {/* need to create seperate page of movies and tv shows */}
             <Route path="/movies" element={<h1>Movies Page</h1>} /> 
             <Route path="/tvshows" element={<h1>TV Shows Page</h1>} />
-            <Route path="/about" element={<h1>About Page</h1>} />
+            <Route path="/about" element={<About mode={switchMode}/>} />
           </Routes>
         </Router>
-        <SearchBar mode={switchMode}/>
       </div>
     </>
   )
