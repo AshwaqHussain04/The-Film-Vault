@@ -10,11 +10,12 @@ export default function SearchBar(props) {
     const [movies,setmovies] = useState([]); //array to store the movies imported from OMDB API
     const [error, setError] = useState(""); //to handle errors
     
-
+    const Key= props.Apikey;
+    
     const onEnterSearchKey = (e) => {
       if (e.key === 'Enter') {
         e.preventDefault(); //to prevent the page from reloading everytime to prevent breaking components
-        fetchMovies(Searchitem, setmovies, setError); //send the movie name from searchbar to Fetch()to fetch that movie
+        fetchMovies(Searchitem, setmovies, setError,Key); //send the movie name from searchbar to Fetch()to fetch that movie
       }
     }
 
