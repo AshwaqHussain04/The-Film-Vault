@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import bootstrap from 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootswatch/dist/flatly/bootstrap.min.css';
 import Navbar from './components/MovieNavbar.js'
 import SearchBar from './components/SearchBar.js'
