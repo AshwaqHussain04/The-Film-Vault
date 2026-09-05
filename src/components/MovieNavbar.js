@@ -11,7 +11,7 @@ export default function MovieNavbar(props) {
   return (
      <nav className="navbar navbar-expand-lg my-3" style={mystyle}>
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">The Film Vault</a>
+          <a className="navbar-brand" href="/">The Film Vault</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -23,10 +23,10 @@ export default function MovieNavbar(props) {
                 </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Movies</a>
+                <a className="nav-link" href="/">Movies</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Tv Shows</a>
+                <a className="nav-link" href="/">Tv Shows</a>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/about">About</Link>

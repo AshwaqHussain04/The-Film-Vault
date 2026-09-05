@@ -1,10 +1,14 @@
-export const fetchMovies = async (searchitem, movie_data, error_Callback,key) => {
+export const fetchMovies = async (
+  searchitem,
+  movie_data,
+  error_Callback,
+  key
+) => {
   let data = [];
   try {
     const response = await fetch(
       `https://www.omdbapi.com/?s=${searchitem}&apikey=${key}`
     );
-
     data = await response.json();
 
     if (data.Response === "True") {

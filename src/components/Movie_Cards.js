@@ -15,7 +15,7 @@ export function MovieCards({ movie, mode }) {
 
   return (
     <>
-      <div className="row">
+      <div className="row my-2">
         <div className="col-md-2">
           <img src={movie.Poster} alt={movie.Title} width="100%" />
         </div>
