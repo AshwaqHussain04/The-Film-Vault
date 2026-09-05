@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import bootstrap from 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootswatch/dist/flatly/bootstrap.min.css';
 import Navbar from './components/MovieNavbar.js'
 import SearchBar from './components/SearchBar.js'
-import { BrowserRouter as Router, Routes, Route, Form } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
 import About from "../src/components/aboutsection.js"
 
