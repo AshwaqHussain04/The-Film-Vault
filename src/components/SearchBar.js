@@ -15,7 +15,7 @@ export default function SearchBar(props) {
     if (movies.length > 0) {
       props.setProgress_TLB(100);
     }
-  }, [movies]); // Only run when movies array changes
+  }, [movies, props.setProgress_TLB]); // Only run when movies array changes
 
   const onEnterSearchKey = (e) => {
     if (e.key === "Enter") {
@@ -39,9 +39,9 @@ export default function SearchBar(props) {
           />
         </div>
       </div>
-      
+
       {error && showAlert(Searchitem, error)}
-      
+
       {movies.length > 0 ? (
         <>
           <p className="text-dark">
